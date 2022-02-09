@@ -1,0 +1,15 @@
+overwrite: true
+schema: "https://api-eu-west-2.graphcms.com/v2/ckzffw3mn0ay001xk37xf30tg/master"
+documents: "src/lib/**/*.graphql"
+generates:
+  src/lib/queries/schema.ts:
+    config:
+      useTypeImports: true
+      skipTypename: true
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-graphql-request"
+hooks:
+  afterAllFileWrite:
+    - "prettier --write src/lib/queries/schema.ts && eslint --fix src/lib/queries/schema.ts"

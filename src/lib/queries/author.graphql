@@ -1,0 +1,14 @@
+query author($id: ID!) {
+  author(where: { id: $id }, stage: PUBLISHED) {
+    name
+    title
+    biography
+    picture {
+      url
+    }
+    posts(first: 500) {
+      title
+      slug
+    }
+  }
+}

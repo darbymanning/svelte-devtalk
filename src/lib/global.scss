@@ -1,0 +1,82 @@
+@import "@neuekit/reboot";
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  align-items: center;
+  background: #1a1f36;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  font-size: 2rem;
+  justify-content: center;
+  padding: 10rem 0;
+}
+
+a {
+  color: inherit;
+  font-weight: bold;
+}
+
+button,
+[type="text"],
+[type="email"],
+[type="password"],
+[type="submit"],
+[type="reset"],
+[type="button"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="number"],
+select {
+  background: rgba(white, 0.1);
+  color: inherit;
+  min-height: 5rem;
+  padding: 1rem;
+
+  &:focus-visible {
+    outline: 2px solid rgba(white, 0.3);
+  }
+
+  &:active {
+    background: rgba(white, 0.2);
+  }
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='50' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-position-x: 100%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  padding-right: 5rem;
+}
+
+button:disabled,
+[type="button"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+legend {
+  margin: 2rem 0;
+}
+
+::selection {
+  background: #6c8eef;
+}
